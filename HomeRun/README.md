@@ -14,6 +14,12 @@
 - `06_exports/`：最终导出的社媒素材。
 - `07_archive/`：过期版本、历史交付物和备份。
 
+## 当前广告项目
+
+- `05_working_files/job-001-player-universe/`：第一支产品广告短片的人物设定、球队设定和人物卡生成任务。
+- `06_exports/job-001-player-universe/`：Job 001 已导出的样卡与成果说明。
+- `00_brief/homerun-product-marketing-brief.md`：HomeRun 当前官网与产品广告口径简报。
+
 ## 命名建议
 
 推荐文件名格式：
