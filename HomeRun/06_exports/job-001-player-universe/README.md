@@ -5,7 +5,9 @@
 ## 当前导出
 
 - `cards/P001_boy_01_lin-che.png`：林澈人物卡首张样卡，由本地 `image-gen-web` 生成；该版本使用修订前的“航海家 / 航线队长”设定，保留为画风参考。
-- `cards/P001_boy_01_lin-che_voyager-two-way.png`：林澈“南湾 Voyager / 二刀流队长”正式修订卡，由本地 `image-gen-web` 生成。
+- `cards/P001_boy_01_lin-che_voyager-two-way.png`：林澈“北洲航海家 / 二刀流队长”正式修订卡，由本地 `image-gen-web` 生成。
+
+当前正式球队口径：主队为“北洲航海家 / Beizhou Voyager”，对手为“城南流星 / Chengnan Meteors”。历史生成记录中的旧队名保留为当时 image-gen-web 任务凭证，不再作为正式命名使用。
 
 ## 生成记录
 

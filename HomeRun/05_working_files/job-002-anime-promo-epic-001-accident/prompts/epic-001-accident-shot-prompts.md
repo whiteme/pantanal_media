@@ -8,11 +8,11 @@ HomeRun anime sports promotional film, cinematic Japanese sports anime, Chinese 
 
 ## 角色锁定
 
-- 林澈：Chinese teenage baseball captain, jersey number 7, South Bay Voyager, two-way CF/P, calm eyes, dark hair, navy and white uniform with gold accents, bat and glove visual cues.
+- 林澈：Chinese teenage baseball captain, jersey number 7, Beizhou Voyager, two-way CF/P, calm eyes, dark hair, navy and white uniform with gold accents, bat and glove visual cues.
 - 沈嘉宁：female coach, composed and analytical, tablet in hand, sports science vibe, warm but decisive.
 - 周远航：head coach, former pitcher, steady but pressured, clipboard or cap, dugout leadership.
-- 石屿：North City Meteors pitcher, fast tempo, intense posture, black/red/gold uniform accents.
-- 赵燃：North City Meteors shortstop, competitive eyes, emotional core for second episode hook.
+- 石屿：Chengnan Meteors pitcher, fast tempo, intense posture, black/red/gold uniform accents.
+- 赵燃：Chengnan Meteors shortstop, competitive eyes, emotional core for second episode hook.
 
 ## 镜头提示
 
@@ -24,7 +24,7 @@ Prompt：Morning highway entrance near a baseball field, traffic control sign gl
 
 ### S02 8:30 球场集合
 
-Prompt：Youth baseball field at 8:30 in summer morning, South Bay Voyager players in deep navy white gold uniforms and North City Meteors players in black red gold warming up, stadium lights still glowing, cinematic anime composition, team contrast, energetic but tense.
+Prompt：Youth baseball field at 8:30 in summer morning, Beizhou Voyager players in deep navy white gold uniforms and Chengnan Meteors players in black red gold warming up, stadium lights still glowing, cinematic anime composition, team contrast, energetic but tense.
 
 剧情作用：建立对阵和时间压力。
 
@@ -66,7 +66,7 @@ Prompt：Ji Anan bunts down the third-base line, third baseman charging, dust ri
 
 ### S09 林澈看见弱点
 
-Prompt：Lin Che jersey number 7 steps into batter box, calm captain expression, bat raised, glove tucked near dugout, subtle analytics overlay reveals defensive gap between third base and shortstop, South Bay Voyager colors, night-blue and golden light mood.
+Prompt：Lin Che jersey number 7 steps into batter box, calm captain expression, bat raised, glove tucked near dugout, subtle analytics overlay reveals defensive gap between third base and shortstop, Beizhou Voyager colors, night-blue and golden light mood.
 
 剧情作用：队长用数据做选择。
 
@@ -96,7 +96,7 @@ Prompt：Late players from both teams running into baseball field with bags over
 
 ### S14 下半局悬念
 
-Prompt：Lin Che standing in center field with glove raised, Zhao Ran from North City Meteors staring from dugout with competitive eyes, HomeRun highlight card and live stream phone glow in foreground, dramatic sunset-gold stadium lights, cliffhanger ending.
+Prompt：Lin Che standing in center field with glove raised, Zhao Ran from Chengnan Meteors staring from dugout with competitive eyes, HomeRun highlight card and live stream phone glow in foreground, dramatic sunset-gold stadium lights, cliffhanger ending.
 
 剧情作用：为第二集留钩子。
 

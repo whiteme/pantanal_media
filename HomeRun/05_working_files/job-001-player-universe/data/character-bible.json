@@ -37,13 +37,13 @@
   },
   "teams": [
     {
-      "id": "south-bay-voyager",
-      "name_zh": "南湾 Voyager",
-      "name_en": "South Bay Voyager",
+      "id": "beizhou-voyager",
+      "name_zh": "北洲航海家",
+      "name_en": "Beizhou Voyager",
       "team_role": "广告主视角球队，代表俱乐部和训练营的专业化运营。",
       "colors": ["深海蓝", "球场白", "金色灯光"],
       "tagline": "把每一次进步带向下一站",
-      "story": "南湾 Voyager 是一支把训练、比赛和复盘都做得很细的社区球队。教练组相信孩子的成长不只靠一句“今天打得不错”，而要用数据把动作、打线、守备和每一次选择讲清楚。",
+      "story": "北洲航海家是一支把训练、比赛和复盘都做得很细的社区球队。教练组相信孩子的成长不只靠一句“今天打得不错”，而要用数据把动作、打线、守备和每一次选择讲清楚。",
       "homeRun_value": "突出球队管理、阵容维护、AI 动作分析、赛后分享。",
       "default_batting_order": ["P001", "P002", "P008", "P006", "P003", "P007", "P005", "P009", "P004"],
       "default_defense": {
@@ -61,13 +61,13 @@
       "coach_ids": ["C001", "C002", "C003"]
     },
     {
-      "id": "north-city-meteors",
-      "name_zh": "城北流星",
-      "name_en": "North City Meteors",
+      "id": "chengnan-meteors",
+      "name_zh": "城南流星",
+      "name_en": "Chengnan Meteors",
       "team_role": "广告对手视角球队，代表赛事现场的速度、对抗和传播张力。",
       "colors": ["夜场黑", "流星红", "暖金边线"],
       "tagline": "每一颗球都要变成故事",
-      "story": "城北流星是一支节奏很快、敢跑敢打的年轻队伍。他们喜欢用速度制造压力，也习惯在赛后一起看回放，把比赛里的每一个关键选择变成下一次训练的题目。",
+      "story": "城南流星是一支节奏很快、敢跑敢打的年轻队伍。他们喜欢用速度制造压力，也习惯在赛后一起看回放，把比赛里的每一个关键选择变成下一次训练的题目。",
       "homeRun_value": "突出专业计分、Live OBS 直播、赛后回放、球员成长数据。",
       "default_batting_order": ["P019", "P011", "P014", "P016", "P017", "P012", "P020", "P018", "P013"],
       "default_defense": {
@@ -89,7 +89,7 @@
     {
       "id": "P001",
       "avatar_key": "boy_01",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "林澈",
       "name_en": "Lin Che",
       "jersey_number": 7,
@@ -102,7 +102,7 @@
       "throwing_hand": "R",
       "role_title": "二刀流队长",
       "one_liner": "他能从中外野追上飞球，也能在最后一局走上投手丘。",
-      "story": "林澈是南湾 Voyager 的 7 号队长，平时守中外野，关键局面也能登板救援。过去他靠直觉跑垒和投球，常常知道自己很拼，却说不清哪一步真的改变了比赛。用了 HomeRun 的比赛回放、投球数记录和 AI 动作分析后，他开始把每一次启动、挥棒和释放点都当成能复盘的选择。",
+      "story": "林澈是北洲航海家的 7 号队长，平时守中外野，关键局面也能登板救援。过去他靠直觉跑垒和投球，常常知道自己很拼，却说不清哪一步真的改变了比赛。用了 HomeRun 的比赛回放、投球数记录和 AI 动作分析后，他开始把每一次启动、挥棒和释放点都当成能复盘的选择。",
       "abilities": {
         "contact": 82,
         "power": 74,
@@ -122,7 +122,7 @@
     {
       "id": "P002",
       "avatar_key": "boy_02",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "顾鸣",
       "name_en": "Gu Ming",
       "jersey_number": 16,
@@ -155,7 +155,7 @@
     {
       "id": "P003",
       "avatar_key": "boy_03",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "许砚",
       "name_en": "Xu Yan",
       "jersey_number": 18,
@@ -168,7 +168,7 @@
       "throwing_hand": "R",
       "role_title": "本垒指挥官",
       "one_liner": "他的暗号不响，却能让投手丘安静下来。",
-      "story": "许砚是南湾的主战捕手，也是场上最会稳定情绪的人。他喜欢在赛后用 HomeRun 的投球记录和打席结果复盘配球，不再只说“感觉今天外角好用”，而是能说清楚为什么。",
+      "story": "许砚是北洲航海家的主战捕手，也是场上最会稳定情绪的人。他喜欢在赛后用 HomeRun 的投球记录和打席结果复盘配球，不再只说“感觉今天外角好用”，而是能说清楚为什么。",
       "abilities": {
         "contact": 74,
         "power": 76,
@@ -188,7 +188,7 @@
     {
       "id": "P004",
       "avatar_key": "boy_04",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "唐岳",
       "name_en": "Tang Yue",
       "jersey_number": 21,
@@ -201,7 +201,7 @@
       "throwing_hand": "R",
       "role_title": "夜场先发",
       "one_liner": "他最擅长把全场的声音压进手套里。",
-      "story": "唐岳是南湾的先发投手。过去他只记得自己今天“球速还行”，现在他会让教练用 HomeRun 记录投球数、结果和关键局面，再配合 AI 投球动作分析找出释放点变化。",
+      "story": "唐岳是北洲航海家的先发投手。过去他只记得自己今天“球速还行”，现在他会让教练用 HomeRun 记录投球数、结果和关键局面，再配合 AI 投球动作分析找出释放点变化。",
       "abilities": {
         "contact": 60,
         "power": 68,
@@ -221,7 +221,7 @@
     {
       "id": "P005",
       "avatar_key": "boy_05",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "韩越",
       "name_en": "Han Yue",
       "jersey_number": 9,
@@ -234,7 +234,7 @@
       "throwing_hand": "R",
       "role_title": "气氛发动机",
       "one_liner": "他一笑，休息区就知道下一球还有机会。",
-      "story": "韩越是二垒手，也是南湾休息区最会带气氛的人。他的广告功能是反应训练和排行榜：速度、反应、守备移动都能被记录，热情不再只是热闹，也能变成训练动力。",
+      "story": "韩越是二垒手，也是北洲航海家休息区最会带气氛的人。他的广告功能是反应训练和排行榜：速度、反应、守备移动都能被记录，热情不再只是热闹，也能变成训练动力。",
       "abilities": {
         "contact": 73,
         "power": 55,
@@ -254,7 +254,7 @@
     {
       "id": "P006",
       "avatar_key": "boy_06",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "陆川",
       "name_en": "Lu Chuan",
       "jersey_number": 27,
@@ -267,7 +267,7 @@
       "throwing_hand": "R",
       "role_title": "长打支点",
       "one_liner": "他站进打击区，外野灯光像被调亮了一格。",
-      "story": "陆川是南湾四棒和一垒手，力量好但早期挥棒轨迹不稳定。AI 挥棒分析让他第一次看到自己的肩胯分离和击球点，他开始相信力量之外还有更细的答案。",
+      "story": "陆川是北洲航海家四棒和一垒手，力量好但早期挥棒轨迹不稳定。AI 挥棒分析让他第一次看到自己的肩胯分离和击球点，他开始相信力量之外还有更细的答案。",
       "abilities": {
         "contact": 72,
         "power": 93,
@@ -287,7 +287,7 @@
     {
       "id": "P007",
       "avatar_key": "girl_01",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "苏晴",
       "name_en": "Su Qing",
       "jersey_number": 5,
@@ -320,7 +320,7 @@
     {
       "id": "P008",
       "avatar_key": "girl_02",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "叶澜",
       "name_en": "Ye Lan",
       "jersey_number": 11,
@@ -353,7 +353,7 @@
     {
       "id": "P009",
       "avatar_key": "girl_05",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "纪安安",
       "name_en": "Ji Anan",
       "jersey_number": 2,
@@ -386,7 +386,7 @@
     {
       "id": "P010",
       "avatar_key": "girl_07",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "宋棠",
       "name_en": "Song Tang",
       "jersey_number": 24,
@@ -399,7 +399,7 @@
       "throwing_hand": "R",
       "role_title": "变速救援",
       "one_liner": "她不靠球速吓人，靠节奏让打者慢半拍。",
-      "story": "宋棠是南湾的救援投手和内野工具人。她会把每次登板后的投球结果交给教练复盘，短片里可以承接“替补、换投、阵容修正”这些真实比赛场景。",
+      "story": "宋棠是北洲航海家的救援投手和内野工具人。她会把每次登板后的投球结果交给教练复盘，短片里可以承接“替补、换投、阵容修正”这些真实比赛场景。",
       "abilities": {
         "contact": 70,
         "power": 52,
@@ -419,7 +419,7 @@
     {
       "id": "P011",
       "avatar_key": "boy_07",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "石屿",
       "name_en": "Shi Yu",
       "jersey_number": 3,
@@ -432,7 +432,7 @@
       "throwing_hand": "R",
       "role_title": "流星先发",
       "one_liner": "他每次抬腿，都像在给比赛按下加速键。",
-      "story": "石屿是城北流星的先发投手，节奏快、攻击性强。他在广告里代表对手的压迫感，也让 HomeRun 的实时计分和投球数管理显得必要。",
+      "story": "石屿是城南流星的先发投手，节奏快、攻击性强。他在广告里代表对手的压迫感，也让 HomeRun 的实时计分和投球数管理显得必要。",
       "abilities": {
         "contact": 64,
         "power": 72,
@@ -452,7 +452,7 @@
     {
       "id": "P012",
       "avatar_key": "boy_08",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "方野",
       "name_en": "Fang Ye",
       "jersey_number": 8,
@@ -485,7 +485,7 @@
     {
       "id": "P013",
       "avatar_key": "boy_09",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "赵燃",
       "name_en": "Zhao Ran",
       "jersey_number": 12,
@@ -518,7 +518,7 @@
     {
       "id": "P014",
       "avatar_key": "boy_10",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "程墨",
       "name_en": "Cheng Mo",
       "jersey_number": 6,
@@ -551,7 +551,7 @@
     {
       "id": "P015",
       "avatar_key": "girl_03",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "林知夏",
       "name_en": "Lin Zhixia",
       "jersey_number": 15,
@@ -564,7 +564,7 @@
       "throwing_hand": "R",
       "role_title": "内野指北针",
       "one_liner": "她不是最大声的人，却总能让大家站到该站的位置。",
-      "story": "林知夏是城北的内野领袖。她的短片场景是赛前阵容确认和守备位置维护，帮助观众理解 HomeRun 不只是记比分，也能把球队组织起来。",
+      "story": "林知夏是城南的内野领袖。她的短片场景是赛前阵容确认和守备位置维护，帮助观众理解 HomeRun 不只是记比分，也能把球队组织起来。",
       "abilities": {
         "contact": 80,
         "power": 59,
@@ -584,7 +584,7 @@
     {
       "id": "P016",
       "avatar_key": "girl_06",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "乔南星",
       "name_en": "Qiao Nanxing",
       "jersey_number": 20,
@@ -597,7 +597,7 @@
       "throwing_hand": "L",
       "role_title": "耐心四棒",
       "one_liner": "她等的不是一个好球，而是一个能改变局面的好球。",
-      "story": "乔南星是城北四棒，不急着挥大棒，喜欢把投手拖进深球数。她代表 HomeRun 的打席质量和高阶统计：好打席不只等于安打。",
+      "story": "乔南星是城南四棒，不急着挥大棒，喜欢把投手拖进深球数。她代表 HomeRun 的打席质量和高阶统计：好打席不只等于安打。",
       "abilities": {
         "contact": 81,
         "power": 88,
@@ -617,7 +617,7 @@
     {
       "id": "P017",
       "avatar_key": "girl_04",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "何以宁",
       "name_en": "He Yining",
       "jersey_number": 17,
@@ -650,7 +650,7 @@
     {
       "id": "P018",
       "avatar_key": "girl_08",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "夏禾",
       "name_en": "Xia He",
       "jersey_number": 23,
@@ -683,7 +683,7 @@
     {
       "id": "P019",
       "avatar_key": "girl_09",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "方可",
       "name_en": "Fang Ke",
       "jersey_number": 1,
@@ -696,7 +696,7 @@
       "throwing_hand": "R",
       "role_title": "一棒闪电",
       "one_liner": "她上垒以后，比分牌就开始紧张。",
-      "story": "方可是城北一棒，左右开弓，速度快。她的广告场景是实时计分里的跑垒推进，让观众看到 HomeRun 如何把快节奏比赛记录清楚。",
+      "story": "方可是城南一棒，左右开弓，速度快。她的广告场景是实时计分里的跑垒推进，让观众看到 HomeRun 如何把快节奏比赛记录清楚。",
       "abilities": {
         "contact": 76,
         "power": 48,
@@ -716,7 +716,7 @@
     {
       "id": "P020",
       "avatar_key": "girl_10",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "盛小满",
       "name_en": "Sheng Xiaoman",
       "jersey_number": 10,
@@ -729,7 +729,7 @@
       "throwing_hand": "R",
       "role_title": "终局微笑",
       "one_liner": "她上场时总在笑，但对手知道那不是轻松的信号。",
-      "story": "盛小满是城北的后段棒次关键打者。她让广告结尾更有温度：赛后无论输赢，球员都能拿到自己的成长卡，知道今天留下了什么。",
+      "story": "盛小满是城南的后段棒次关键打者。她让广告结尾更有温度：赛后无论输赢，球员都能拿到自己的成长卡，知道今天留下了什么。",
       "abilities": {
         "contact": 75,
         "power": 70,
@@ -750,7 +750,7 @@
   "coaches": [
     {
       "id": "C001",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "周远航",
       "name_en": "Zhou Yuanhang",
       "role": "总教练",
@@ -760,13 +760,13 @@
       "coaching_strength": "基本功体系、投手管理、赛后复盘",
       "homeRun_scene": "阵容维护、默认打线、赛后复盘会议。",
       "card_copy": {
-        "title": "把热爱带向下一站",
+        "title": "把热爱带上航线",
         "quote": "孩子需要鼓励，也需要知道自己哪里真的进步了。"
       }
     },
     {
       "id": "C002",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "沈嘉宁",
       "name_en": "Shen Jianing",
       "role": "打击与 AI 动作分析教练",
@@ -782,7 +782,7 @@
     },
     {
       "id": "C003",
-      "team_id": "south-bay-voyager",
+      "team_id": "beizhou-voyager",
       "name_zh": "杜鹏",
       "name_en": "Du Peng",
       "role": "队务与直播协调",
@@ -798,13 +798,13 @@
     },
     {
       "id": "C004",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "马驰",
       "name_en": "Ma Chi",
       "role": "总教练",
       "height_cm": 182,
       "weight_kg": 86,
-      "story": "年轻时是强攻型投手，执教后依然喜欢快节奏。他用 HomeRun 管投手和跑垒风险，让城北流星的速度有边界、有依据。",
+      "story": "年轻时是强攻型投手，执教后依然喜欢快节奏。他用 HomeRun 管投手和跑垒风险，让城南流星的速度有边界、有依据。",
       "coaching_strength": "投手节奏、跑垒压迫、临场换人",
       "homeRun_scene": "实时计分、投手顺序、临场换人。",
       "card_copy": {
@@ -814,7 +814,7 @@
     },
     {
       "id": "C005",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "梁若水",
       "name_en": "Liang Ruoshui",
       "role": "数据与计分教练",
@@ -830,7 +830,7 @@
     },
     {
       "id": "C006",
-      "team_id": "north-city-meteors",
+      "team_id": "chengnan-meteors",
       "name_zh": "陈泊",
       "name_en": "Chen Bo",
       "role": "视频与球员成长教练",

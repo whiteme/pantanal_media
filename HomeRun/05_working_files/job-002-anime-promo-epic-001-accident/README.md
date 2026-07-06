@@ -10,8 +10,9 @@
 
 ## 口径说明
 
-- 正式队名沿用 Job 001 当前设定：`南湾 Voyager / South Bay Voyager` 对阵 `城北流星 / North City Meteors`。
-- 用户原始梗概中的“航海家”在本 Job 中统一落为“南湾 Voyager”。
+- 正式队名沿用 Job 001 当前设定：`北洲航海家 / Beizhou Voyager` 对阵 `城南流星 / Chengnan Meteors`。
+- 用户原始梗概中的“航海家”在本 Job 中统一落为“北洲航海家”。
+- 英文命名中，“航海家”统一使用 `Voyager`，不使用 `Navigators`。
 - 《点球成金》只作为“数据棒球思维”的创意参照，不复刻电影台词或具体镜头。
 
 ## 美术方向

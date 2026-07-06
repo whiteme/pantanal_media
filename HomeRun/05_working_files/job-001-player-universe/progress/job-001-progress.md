@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-状态：角色设定与卡片任务归档完成，人物卡图片已通过 image-gen-web 跑通首张样卡，并完成林澈 Voyager 二刀流修订卡。
+状态：角色设定与卡片任务归档完成，人物卡图片已通过 image-gen-web 跑通首张样卡，并完成林澈 Beizhou Voyager 二刀流修订卡。
 
 ## 已完成
 
@@ -13,14 +13,14 @@
 - 归档系统默认球员头像到 `HomeRun/02_source_assets/reference/player-avatars/`。
 - 生成默认头像总览图：`HomeRun/02_source_assets/reference/default-player-avatar-contact-sheet.png`。
 - 归档 HomeRun hero 风格背景到 `HomeRun/02_source_assets/reference/hero-backgrounds/`。
-- 建立两支广告球队：南湾 Voyager、城北流星。
+- 建立两支广告球队：北洲航海家 / Beizhou Voyager、城南流星 / Chengnan Meteors。
 - 完成 20 名正式球员人物设定。
 - 完成 6 名教练员人物设定。
 - 完成人物卡 image-gen-web 任务清单。
 - 创建可复用本地 skill：`/Users/shenn-litscope/.codex/skills/image-gen-web`。
 - 校验 `image-gen-web` skill 通过。
 - 使用 image-gen-web 生成首张样卡：林澈 / `P001_boy_01_lin-che.png`。
-- 按反馈修订南湾队命名：由“南湾航海家 / South Bay Navigators”调整为“南湾 Voyager / South Bay Voyager”。
+- 按最新反馈确认正式队名：主队为“北洲航海家 / Beizhou Voyager”，对手为“城南流星 / Chengnan Meteors”；“航海家”的英文统一使用 Voyager。
 - 按反馈修订 7 号队长林澈：由中外野速度型队长升级为 CF/P 二刀流队长，补充投球能力、关键救援故事和对应人物卡 prompt。
 - 使用 image-gen-web 生成林澈 Voyager 二刀流正式修订卡：`P001_boy_01_lin-che_voyager-two-way.png`。
 
