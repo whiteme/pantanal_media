@@ -37,13 +37,13 @@
   },
   "teams": [
     {
-      "id": "south-bay-navigators",
-      "name_zh": "南湾航海家",
-      "name_en": "South Bay Navigators",
+      "id": "south-bay-voyager",
+      "name_zh": "南湾 Voyager",
+      "name_en": "South Bay Voyager",
       "team_role": "广告主视角球队，代表俱乐部和训练营的专业化运营。",
       "colors": ["深海蓝", "球场白", "金色灯光"],
-      "tagline": "把每一次进步留在航线里",
-      "story": "南湾航海家是一支把训练、比赛和复盘都做得很细的社区球队。教练组相信孩子的成长不只靠一句“今天打得不错”，而要用数据把动作、打线、守备和每一次选择讲清楚。",
+      "tagline": "把每一次进步带向下一站",
+      "story": "南湾 Voyager 是一支把训练、比赛和复盘都做得很细的社区球队。教练组相信孩子的成长不只靠一句“今天打得不错”，而要用数据把动作、打线、守备和每一次选择讲清楚。",
       "homeRun_value": "突出球队管理、阵容维护、AI 动作分析、赛后分享。",
       "default_batting_order": ["P001", "P002", "P008", "P006", "P003", "P007", "P005", "P009", "P004"],
       "default_defense": {
@@ -89,40 +89,40 @@
     {
       "id": "P001",
       "avatar_key": "boy_01",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "林澈",
       "name_en": "Lin Che",
       "jersey_number": 7,
       "gender": "M",
       "height_cm": 178,
       "weight_kg": 68,
-      "primary_position": "CF",
+      "primary_position": "CF/P",
       "secondary_positions": ["RF"],
       "batting_hand": "R",
       "throwing_hand": "R",
-      "role_title": "航线队长",
-      "one_liner": "他不一定每次都打最远，但总能把球队带到正确的垒包。",
-      "story": "林澈是南湾航海家的中外野和队长。过去他靠直觉跑垒，常常多冲一步也多丢一个出局数。用了 HomeRun 的比赛回放和跑垒记录后，他开始把每一次起跑、停步和滑垒都当成能复盘的选择。",
+      "role_title": "二刀流队长",
+      "one_liner": "他能从中外野追上飞球，也能在最后一局走上投手丘。",
+      "story": "林澈是南湾 Voyager 的 7 号队长，平时守中外野，关键局面也能登板救援。过去他靠直觉跑垒和投球，常常知道自己很拼，却说不清哪一步真的改变了比赛。用了 HomeRun 的比赛回放、投球数记录和 AI 动作分析后，他开始把每一次启动、挥棒和释放点都当成能复盘的选择。",
       "abilities": {
         "contact": 82,
-        "power": 70,
+        "power": 74,
         "speed": 91,
         "fielding": 88,
-        "pitching": 42,
-        "baseball_iq": 90
+        "pitching": 86,
+        "baseball_iq": 92
       },
-      "signature_skill": "外野第一步判断",
-      "homeRun_scene": "赛后球员卡分享，展示跑垒贡献和关键接杀。",
+      "signature_skill": "中外野覆盖与终局救援",
+      "homeRun_scene": "AI 投球动作分析、跑垒贡献、投球数管理与赛后球员卡分享。",
       "card_copy": {
-        "title": "航线队长",
-        "stat_focus": "速度 / 路线判断 / 关键接杀",
-        "quote": "每一次启动，都应该被看见。"
+        "title": "二刀流队长",
+        "stat_focus": "速度 / 投球数 / 关键救援",
+        "quote": "攻守之间，每一次选择都应该被看见。"
       }
     },
     {
       "id": "P002",
       "avatar_key": "boy_02",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "顾鸣",
       "name_en": "Gu Ming",
       "jersey_number": 16,
@@ -155,7 +155,7 @@
     {
       "id": "P003",
       "avatar_key": "boy_03",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "许砚",
       "name_en": "Xu Yan",
       "jersey_number": 18,
@@ -188,7 +188,7 @@
     {
       "id": "P004",
       "avatar_key": "boy_04",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "唐岳",
       "name_en": "Tang Yue",
       "jersey_number": 21,
@@ -221,7 +221,7 @@
     {
       "id": "P005",
       "avatar_key": "boy_05",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "韩越",
       "name_en": "Han Yue",
       "jersey_number": 9,
@@ -254,7 +254,7 @@
     {
       "id": "P006",
       "avatar_key": "boy_06",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "陆川",
       "name_en": "Lu Chuan",
       "jersey_number": 27,
@@ -287,7 +287,7 @@
     {
       "id": "P007",
       "avatar_key": "girl_01",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "苏晴",
       "name_en": "Su Qing",
       "jersey_number": 5,
@@ -320,7 +320,7 @@
     {
       "id": "P008",
       "avatar_key": "girl_02",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "叶澜",
       "name_en": "Ye Lan",
       "jersey_number": 11,
@@ -353,7 +353,7 @@
     {
       "id": "P009",
       "avatar_key": "girl_05",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "纪安安",
       "name_en": "Ji Anan",
       "jersey_number": 2,
@@ -386,7 +386,7 @@
     {
       "id": "P010",
       "avatar_key": "girl_07",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "宋棠",
       "name_en": "Song Tang",
       "jersey_number": 24,
@@ -750,7 +750,7 @@
   "coaches": [
     {
       "id": "C001",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "周远航",
       "name_en": "Zhou Yuanhang",
       "role": "总教练",
@@ -760,13 +760,13 @@
       "coaching_strength": "基本功体系、投手管理、赛后复盘",
       "homeRun_scene": "阵容维护、默认打线、赛后复盘会议。",
       "card_copy": {
-        "title": "把热爱带上航线",
+        "title": "把热爱带向下一站",
         "quote": "孩子需要鼓励，也需要知道自己哪里真的进步了。"
       }
     },
     {
       "id": "C002",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "沈嘉宁",
       "name_en": "Shen Jianing",
       "role": "打击与 AI 动作分析教练",
@@ -782,7 +782,7 @@
     },
     {
       "id": "C003",
-      "team_id": "south-bay-navigators",
+      "team_id": "south-bay-voyager",
       "name_zh": "杜鹏",
       "name_en": "Du Peng",
       "role": "队务与直播协调",
