@@ -1,2 +1,8 @@
 .DS_Store
-
+__pycache__/
+*.pyc
+HomeRun/06_exports/**/audio/*.wav
+HomeRun/06_exports/**/scenes/**/*.png
+HomeRun/06_exports/**/keyframes/*.png
+HomeRun/06_exports/**/videos/*.ffmpeg.log
+HomeRun/05_working_files/**/progress/product-070-*-frames/*.jpg
