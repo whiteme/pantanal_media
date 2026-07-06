@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-状态：v0.2 白天真实运动番方向已完成第一版成片，并已归档可播放 MP4、脚本、真实产品截图、关键帧、预览 contact sheet 和验证记录。音频母带与逐帧预览图本地保留，可由脚本再生成。
+状态：v0.4 棒球可信度修订版已完成，并已归档可播放 MP4、脚本、真实产品截图、关键帧、预览 contact sheet 和验证记录。音频母带与逐帧预览图本地保留，可由脚本再生成。
 
 ## 创意判断
 
@@ -14,6 +14,7 @@
 - 画面风格延续 HomeRun 默认头像与 hero 背景：明亮日漫运动番、真实棒球动作、克制数据叠层。
 - 正式队名：`北洲航海家 / Beizhou Voyager` 对阵 `城南流星 / Chengnan Meteors`。
 - v0.2 修订：比赛发生在白天，画风要明亮；棒球动作要真实，不能出现火球、能量光轨、魔法/超能力效果；产品画面必须使用真实 HomeRun 截图。
+- v0.4 修订：棒球可信度优先；航海家上半局为白色攻方，不带接球手套；城南流星上半局为蓝色守方，守备员/捕手带手套与护具；打席站位、击球方向、球路和下半局攻防切换需要符合真实棒球规则。
 
 ## 已完成
 
@@ -42,10 +43,27 @@
 - 已生成 v0.2 验证记录：
   - `progress/episode-001-v0.2-ffprobe.json`
   - `scripts/episode-001-scene-manifest-v0.2.json`
+- 已建立 `creative-direction-v0.4.md`，记录棒球可信度硬性规则。
+- 已通过本地 `image-gen-web` 生成 v0.4 可信度修订关键帧，并归档在 `HomeRun/06_exports/job-003-anime-episode-001-production/keyframes/v0.4/`：
+  - S02/S03/S12/S13：统一城南流星蓝色队服，并明确下半局攻防切换。
+  - S06-S11：修正攻防手套、捕手装备、打席站位、短打方向、地滚球防守与扑回本垒动作。
+- 已生成 v0.4 关键帧质检 contact sheet：
+  - `progress/keyframes-v0.4-credibility-fixes-contact-sheet.jpg`
+  - `progress/keyframes-v0.4-final-selection-contact-sheet.jpg`
+- 已将 `scripts/build-episode.py` 升级为 v0.4 合成器：优先使用 v0.4 可信度关键帧，并对 S04 平板屏幕叠加真实 HomeRun 场地图，修正屏幕方向。
+- 已生成第一集 v0.4 成片：
+  - `HomeRun/06_exports/job-003-anime-episode-001-production/videos/homerun-epic-001-accident-v0.4.mp4`
+  - 时长 98 秒，1080x1920，H.264 视频 + AAC 音频。
+- 已生成 v0.4 正式版预览帧、contact sheet 和验证记录：
+  - `HomeRun/06_exports/job-003-anime-episode-001-production/scenes/v0.4/`
+  - `progress/episode-v0.4-preview-contact-sheet.jpg`
+  - `progress/episode-001-v0.4-ffprobe.json`
+  - `scripts/episode-001-scene-manifest-v0.4.json`
 
 ## 质检结论
 
 - 白天设定已落实：成片关键镜头均为晴朗/明亮训练赛场景。
 - 不真实动漫特效已规避：成片无火球棒球、能量光轨、魔法阵、爆炸或超能力表现。
 - 产品画面已替换为真实 HomeRun 截图：专业计分、数据分布、打席记录、分享战报、Live Console 等画面均来自 `source-assets/product-070/`。
+- 棒球可信度已修订：S06-S11 动作镜头中，航海家攻方打者/跑者不带接球手套，流星蓝色防守方带手套；S08 短打站位和方向、S10 地滚球防守、S11 捕手触杀、S13 下半局攻防切换均已重做。
 - 剧情覆盖完整：高速管制、8:30 集合、阵容缺失、HomeRun 辅助打线、替补上垒、满垒、林澈地滚球、场内本垒打、迟到队员到场、下半局悬念。

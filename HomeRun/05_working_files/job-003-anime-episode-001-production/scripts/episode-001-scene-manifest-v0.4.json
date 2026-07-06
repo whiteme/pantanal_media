@@ -1,0 +1,156 @@
+[
+  {
+    "shot_id": "S01",
+    "start": 0.0,
+    "end": 6.0,
+    "duration": 6.0,
+    "title": "冷开场",
+    "subtitle": "有些比赛，还没开打，就先被意外投了一颗坏球。",
+    "background": "S01",
+    "overlay": "traffic",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S02",
+    "start": 6.0,
+    "end": 12.5,
+    "duration": 6.5,
+    "title": "8:30 集合",
+    "subtitle": "暑期杯训练赛，北洲航海家对阵城南流星。集合时间，8 点 30 分。",
+    "background": "S02",
+    "overlay": "matchup",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S03",
+    "start": 12.5,
+    "end": 19.5,
+    "duration": 7.0,
+    "title": "意外扩大",
+    "subtitle": "高速临时管制，两队都有主力无法准时到场。默认打线失效。",
+    "background": "S03",
+    "overlay": "missing",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S04",
+    "start": 19.5,
+    "end": 28.0,
+    "duration": 8.5,
+    "title": "HomeRun 上场",
+    "subtitle": "沈指导打开 HomeRun：先别找谁像主力，先找谁能把这一局接起来。",
+    "background": "S04",
+    "overlay": "workbench",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S05",
+    "start": 28.0,
+    "end": 36.0,
+    "duration": 8.0,
+    "title": "数据打线",
+    "subtitle": "不是赌，是用证据排。每一次训练记录，都会在临场决策里发挥作用。",
+    "background": "S05",
+    "overlay": "lineup",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S06",
+    "start": 36.0,
+    "end": 42.5,
+    "duration": 6.5,
+    "title": "第一棒",
+    "subtitle": "苏晴选球上垒，先把比赛重新拉回可控的节奏。",
+    "background": "S06",
+    "overlay": "walk",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S07",
+    "start": 42.5,
+    "end": 49.0,
+    "duration": 6.5,
+    "title": "推进",
+    "subtitle": "顾鸣轻推右半边，跑者稳稳前进。替补打线开始运转。",
+    "background": "S07",
+    "overlay": "advance",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S08",
+    "start": 49.0,
+    "end": 56.0,
+    "duration": 7.0,
+    "title": "满垒",
+    "subtitle": "纪安安短打沿三垒线滚动，把队友一个一个送到满垒。",
+    "background": "S08",
+    "overlay": "bunt",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S09",
+    "start": 56.0,
+    "end": 64.0,
+    "duration": 8.0,
+    "title": "队长打席",
+    "subtitle": "林澈看见三游间的空隙：不是打最远，而是打到比赛最需要的地方。",
+    "background": "S09",
+    "overlay": "gap",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S10",
+    "start": 64.0,
+    "end": 71.0,
+    "duration": 7.0,
+    "title": "强袭地滚",
+    "subtitle": "强袭地滚球贴着泥土穿过防线，跑者连续回本垒。",
+    "background": "S10",
+    "overlay": "grounder",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S11",
+    "start": 71.0,
+    "end": 78.5,
+    "duration": 7.5,
+    "title": "4 - 0",
+    "subtitle": "林澈扑回本垒，场内本垒打。北洲航海家上半局带回 4 分。",
+    "background": "S11",
+    "overlay": "slide",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S12",
+    "start": 78.5,
+    "end": 85.0,
+    "duration": 6.5,
+    "title": "局势升级",
+    "subtitle": "迟到队员同时赶到。比赛没有结束，紧张才刚刚开始。",
+    "background": "S12",
+    "overlay": "late_arrival",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "S13",
+    "start": 85.0,
+    "end": 93.0,
+    "duration": 8.0,
+    "title": "下半局悬念",
+    "subtitle": "下半局，是航海家的防守更强，还是流星追回比赛？",
+    "background": "S13",
+    "overlay": "cliffhanger",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  },
+  {
+    "shot_id": "END",
+    "start": 93.0,
+    "end": 98.0,
+    "duration": 5.0,
+    "title": "HomeRun",
+    "subtitle": "让棒球被热爱，让进步留脚印。第二集《反击》，敬请期待。",
+    "background": "cover",
+    "overlay": "endcard",
+    "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction"
+  }
+]

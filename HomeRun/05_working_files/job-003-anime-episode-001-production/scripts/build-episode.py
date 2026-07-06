@@ -25,6 +25,7 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 W, H = 1080, 1920
 FPS = 24
 SR = 48_000
+VERSION = "v0.4"
 FFMPEG = Path("/opt/homebrew/bin/ffmpeg")
 FFPROBE = Path("/opt/homebrew/bin/ffprobe")
 
@@ -47,6 +48,7 @@ LINE = (214, 224, 228)
 
 PRODUCTS: dict[str, Image.Image] = {}
 PRODUCT_CACHE: dict[tuple[str, int, int], Image.Image] = {}
+TABLET_FIELD_SOURCE: Image.Image | None = None
 
 
 @dataclass(frozen=True)
@@ -75,8 +77,8 @@ def out_dirs(root: Path) -> dict[str, Path]:
         "export": job_export,
         "audio": job_export / "audio",
         "videos": job_export / "videos",
-        "scenes": job_export / "scenes/v0.2",
-        "keyframes": job_export / "keyframes/v0.2",
+        "scenes": job_export / f"scenes/{VERSION}",
+        "keyframes": job_export / f"keyframes/{VERSION}",
         "product": job_work / "source-assets/product-070",
     }
 
@@ -251,6 +253,69 @@ def product_fit(key: str, size: tuple[int, int]) -> Image.Image:
     return PRODUCT_CACHE[cache_key]
 
 
+def tablet_field_source() -> Image.Image:
+    global TABLET_FIELD_SOURCE
+    if TABLET_FIELD_SOURCE is None:
+        product = PRODUCTS["scorekeeping"]
+        w, h = product.size
+        # Use the real HomeRun scorekeeping field area as the in-world tablet UI.
+        field = product.crop((0, int(h * 0.235), w, int(h * 0.535)))
+        TABLET_FIELD_SOURCE = field.resize((900, 380), Image.Resampling.LANCZOS).convert("RGBA")
+    return TABLET_FIELD_SOURCE
+
+
+def perspective_coeffs(
+    dst_points: list[tuple[float, float]],
+    src_points: list[tuple[float, float]],
+) -> tuple[float, ...]:
+    matrix = []
+    vector = []
+    for (x, y), (u, v) in zip(dst_points, src_points):
+        matrix.append([x, y, 1, 0, 0, 0, -u * x, -u * y])
+        vector.append(u)
+        matrix.append([0, 0, 0, x, y, 1, -v * x, -v * y])
+        vector.append(v)
+    return tuple(np.linalg.solve(np.array(matrix, dtype=np.float64), np.array(vector, dtype=np.float64)).tolist())
+
+
+def tablet_screen_quad(p: float) -> list[tuple[int, int]]:
+    zoom = 1.10
+    src_w, src_h = 945, 1680
+    scale = max(math.ceil(W * zoom) / src_w, math.ceil(H * zoom) / src_h)
+    max_x = max(0, math.ceil(W * zoom) - W)
+    max_y = max(0, math.ceil(H * zoom) - H)
+    px = 0.42 + (0.54 - 0.42) * ease_in_out(p)
+    py = 0.18 + (0.64 - 0.18) * ease_in_out(p)
+    crop_x = int(max_x * clamp(px))
+    crop_y = int(max_y * clamp(py))
+    original = [(362, 1092), (708, 1071), (748, 1278), (294, 1292)]
+    return [(int(x * scale - crop_x), int(y * scale - crop_y)) for x, y in original]
+
+
+def draw_tablet_screen_fix(frame: Image.Image, p: float) -> None:
+    source = tablet_field_source()
+    quad = tablet_screen_quad(p)
+    d = ImageDraw.Draw(frame, "RGBA")
+    shadow = [(x + 5, y + 8) for x, y in quad]
+    d.polygon(shadow, fill=(12, 24, 30, 44))
+
+    src_quad = [(0, 0), (source.width, 0), (source.width, source.height), (0, source.height)]
+    coeffs = perspective_coeffs(quad, src_quad)
+    warped = source.transform(
+        (W, H),
+        Image.Transform.PERSPECTIVE,
+        coeffs,
+        Image.Resampling.BICUBIC,
+        fillcolor=(0, 0, 0, 0),
+    )
+    mask = Image.new("L", (W, H), 0)
+    md = ImageDraw.Draw(mask)
+    md.polygon(quad, fill=224)
+    warped.putalpha(mask)
+    frame.alpha_composite(warped)
+    d.line(quad + [quad[0]], fill=(255, 255, 255, 90), width=2)
+
+
 def paste_rounded(frame: Image.Image, img: Image.Image, box: tuple[int, int, int, int], radius: int) -> None:
     x1, y1, x2, y2 = box
     w, h = x2 - x1, y2 - y1
@@ -422,9 +487,9 @@ def overlay_matchup(frame: Image.Image, p: float, _t_abs: float) -> None:
     d.text((112, y + 40), "北洲航海家", font=F_H1, fill=INK + (255,))
     d.text((116, y + 119), "BEIZHOU VOYAGER", font=F_SMALL_B, fill=NAVY + (238,))
     d.text((W - 230, y + 76), "VS", font=F_H1, fill=ORANGE + (255,))
-    rounded(d, (72, y + 266, W - 72, y + 490), 30, PANEL + (230,), RED + (128,), 3)
+    rounded(d, (72, y + 266, W - 72, y + 490), 30, PANEL + (230,), BLUE + (128,), 3)
     d.text((112, y + 306), "城南流星", font=F_H1, fill=INK + (255,))
-    d.text((116, y + 385), "CHENGNAN METEORS", font=F_SMALL_B, fill=RED + (238,))
+    d.text((116, y + 385), "CHENGNAN METEORS", font=F_SMALL_B, fill=BLUE + (238,))
     draw_info_card(frame, (82, 1195), "7 号队长", "林澈", "CF / P 二刀流", clamp((p - 0.46) / 0.26), ORANGE, 420)
     draw_info_card(frame, (564, 1195), "训练赛", "上半局", "航海家先攻", clamp((p - 0.56) / 0.26), BLUE, 420)
 
@@ -461,6 +526,7 @@ def overlay_workbench(frame: Image.Image, p: float, _t_abs: float) -> None:
         "场上站位 / 跑垒状态",
         GREEN,
     )
+    draw_tablet_screen_fix(frame, p)
     draw_info_card(frame, (76, 1030), "决策原则", "证据优先", "不是谁像主力，而是谁能接住这一局", clamp((p - 0.42) / 0.28), ORANGE, 500)
     draw_chip(frame, (82, 1248), "阵容维护", clamp((p - 0.55) / 0.18), BLUE)
     draw_chip(frame, (312, 1248), "训练记录", clamp((p - 0.62) / 0.18), GREEN)
@@ -603,7 +669,7 @@ def overlay_late_arrival(frame: Image.Image, p: float, _t_abs: float) -> None:
         BLUE,
     )
     draw_info_card(frame, (80, 1044), "上半局", "4 分", "北洲航海家抢先", clamp((p - 0.32) / 0.24), ORANGE, 420)
-    draw_info_card(frame, (568, 1044), "下半局", "反击", "城南流星进攻", clamp((p - 0.48) / 0.24), RED, 420)
+    draw_info_card(frame, (568, 1044), "下半局", "反击", "城南流星进攻", clamp((p - 0.48) / 0.24), BLUE, 420)
 
 
 def overlay_cliffhanger(frame: Image.Image, p: float, _t_abs: float) -> None:
@@ -613,7 +679,7 @@ def overlay_cliffhanger(frame: Image.Image, p: float, _t_abs: float) -> None:
     d.text((116, 342), "航海家守得住，还是流星追回？", font=F_SMALL_B, fill=NAVY + (240,))
     draw_base_diamond(frame, (W // 2, 1020), 1.0, 0, p)
     draw_chip(frame, (118, 1248), "林澈准备防守", clamp((p - 0.26) / 0.24), NAVY)
-    draw_chip(frame, (118, 1330), "赵燃准备反击", clamp((p - 0.42) / 0.24), RED)
+    draw_chip(frame, (118, 1330), "赵燃准备反击", clamp((p - 0.42) / 0.24), BLUE)
     d.text((118, 1452), "期待第二集《反击》", font=F_H2, fill=INK + (245,))
 
 
@@ -681,21 +747,22 @@ for _scene in SCENES:
 
 
 def keyframe_paths(root: Path) -> dict[str, Path]:
-    key_dir = root / "HomeRun/06_exports/job-003-anime-episode-001-production/keyframes/v0.2"
+    key_dir_v02 = root / "HomeRun/06_exports/job-003-anime-episode-001-production/keyframes/v0.2"
+    key_dir_v04 = root / "HomeRun/06_exports/job-003-anime-episode-001-production/keyframes/v0.4"
     return {
-        "S01": key_dir / "S01_daytime_traffic_control.png",
-        "S02": key_dir / "S02_daytime_830_field_arrival.png",
-        "S03": key_dir / "S03_daytime_missing_players_dugout.png",
-        "S04": key_dir / "S04_daytime_coach_tablet_blank.png",
-        "S05": key_dir / "S05_daytime_lineup_decision.png",
-        "S06": key_dir / "S06_daytime_suqing_walks_on_base.png",
-        "S07": key_dir / "S07_daytime_guming_advances_runner.png",
-        "S08": key_dir / "S08_daytime_bunt_bases_loaded.png",
-        "S09": key_dir / "S09_daytime_linche_reads_gap.png",
-        "S10": key_dir / "S10_daytime_real_ground_ball_gap.png",
-        "S11": key_dir / "S11_daytime_linche_home_slide_real.png",
-        "S12": key_dir / "S12_daytime_late_players_arrive.png",
-        "S13": key_dir / "S13_daytime_defense_cliffhanger.png",
+        "S01": key_dir_v02 / "S01_daytime_traffic_control.png",
+        "S02": key_dir_v04 / "S02_daytime_830_field_arrival_blue_meteors.png",
+        "S03": key_dir_v04 / "S03_daytime_missing_players_dugout_blue_meteors.png",
+        "S04": key_dir_v02 / "S04_daytime_coach_tablet_blank.png",
+        "S05": key_dir_v02 / "S05_daytime_lineup_decision.png",
+        "S06": key_dir_v04 / "S06_daytime_suqing_walks_on_base_no_glove.png",
+        "S07": key_dir_v04 / "S07_daytime_guming_advances_runner_no_glove.png",
+        "S08": key_dir_v04 / "S08_daytime_bunt_bases_loaded_blue_defense.png",
+        "S09": key_dir_v04 / "S09_daytime_linche_reads_gap_no_glove.png",
+        "S10": key_dir_v04 / "S10_daytime_ground_ball_blue_meteors_gloves.png",
+        "S11": key_dir_v04 / "S11_daytime_linche_home_slide_blue_catcher.png",
+        "S12": key_dir_v04 / "S12_daytime_late_players_arrive_blue_meteors.png",
+        "S13": key_dir_v04 / "S13_daytime_defense_cliffhanger_blue_meteors.png",
     }
 
 
@@ -896,7 +963,7 @@ def write_scene_manifest(path: Path) -> None:
                 "subtitle": scene.subtitle,
                 "background": scene.bg,
                 "overlay": scene.overlay,
-                "visual_direction": "v0.2 daylight realistic baseball, no fireball or fantasy effects",
+                "visual_direction": "v0.4 daylight baseball credibility: Voyager offense in white without fielding gloves; Meteors defense in blue with gloves; legal batting stance and direction",
             }
         )
         cursor += scene.duration
@@ -1004,10 +1071,10 @@ def main() -> int:
     for path in dirs.values():
         path.mkdir(parents=True, exist_ok=True)
 
-    output = dirs["videos"] / "homerun-epic-001-accident-v0.2.mp4"
-    audio = dirs["audio"] / "homerun-epic-001-v0.2-synthetic-mix.wav"
-    manifest = dirs["work"] / "scripts/episode-001-scene-manifest-v0.2.json"
-    probe = dirs["work"] / "progress/episode-001-v0.2-ffprobe.json"
+    output = dirs["videos"] / f"homerun-epic-001-accident-{VERSION}.mp4"
+    audio = dirs["audio"] / f"homerun-epic-001-{VERSION}-synthetic-mix.wav"
+    manifest = dirs["work"] / f"scripts/episode-001-scene-manifest-{VERSION}.json"
+    probe = dirs["work"] / f"progress/episode-001-{VERSION}-ffprobe.json"
 
     print("loading backgrounds", flush=True)
     backgrounds = load_backgrounds(root)
